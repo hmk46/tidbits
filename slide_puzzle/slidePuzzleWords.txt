@@ -1,0 +1,5 @@
+polymorphic, A computer programming concept about method versatility, 4, 3
+linguistics, the study of languages, 4, 3
+singleton, an immutable object design, 3, 3
+thermodynamic, pertaining to the study of heat physics, 5, 3
+electromagnetic, fundamental force that mediates matter interaction, 4, 4
