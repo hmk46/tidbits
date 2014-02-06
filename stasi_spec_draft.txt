@@ -1,0 +1,27 @@
+Shorthand Textbook specificAtion notatIon (stasi)
+
+general syntax: spec[;spec2[;...;specN]]
+
+specifier syntax: pspec:qspec
+
+Page and question specifiers use the following selection operators for determining their ranges, listed in ascending order of precedence:
+
+comma (,): union operator; used to join two non-contiguous ranges
+	example: 29:3,12,17
+
+hyphen (-): range operator; used for specifying the boundaries of a contiguous range; inclusive on both ends.
+	example: 25-28:1,4,8-11,19,31-42
+
+slash (/): exclusion operator; used to exclude a subordinate item from a selection.
+
+All the selection operators are left-associative. Operators may be repeated multiple times to elevate their precedence. Elevated operators will have a precedence greater than all operators with a lower elevation level, but maintain the same precedence order relative to their own elevation level.
+For example, the specifier
+	2-7/c
+denotes a range from question 2 to 7, excluding section c from question 7;
+the specifier
+	2--7/c
+denotes a range from question 2 to 7, excluding section c from all of them;
+and the specifier
+	2//a---D--7/c,,e
+denotes a range from question 2 to 7, excluding sections a to d from question 2 and sections c and e from all of them.
+
